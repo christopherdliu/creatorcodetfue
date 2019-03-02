@@ -1,4 +1,4 @@
-# creatorcodetfue
+# CreatorCodeTfue
 Hoo Hacks 2019 - CreatorCodeTfue
 
 Charles Chen, Jeffrey Ding, Talia Lee, Christopher Liu
