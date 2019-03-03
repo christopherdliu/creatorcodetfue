@@ -16,9 +16,14 @@
     <string name="serves">Servings</string>
     <string name="directions">Directions</string>
     <string name="ingredients">Ingredients</string>
+    <string name="basket">Item Basket</string>
+    <string name="recipes">Recipes</string>
+    <string-array name="list_entries">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
 
-
-
-
-
+    </string-array>
 </resources>
