@@ -7,4 +7,6 @@
     <string name="nav_header_title">CreatorCodeTfue</string>
     <string name="nav_header_subtitle">Charles, Jeff, Talia, Chris</string>
     <string name="nav_header_desc">CreatorCodeTfue</string>
+    <string name="basket">Basket</string>
+    <string name="recipes">Recipes</string>
 </resources>

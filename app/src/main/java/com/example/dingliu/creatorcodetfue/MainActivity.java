@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,14 +26,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Action Bar and hamburger menu
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.menu);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
 
+
+        // search function
         searchView = findViewById(R.id.searchView);
         searchView.setQueryHint("Search");
         searchView.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +52,24 @@ public class MainActivity extends AppCompatActivity {
                 searchView.clearFocus();
             }
         }, 300);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Toast.makeText(getApplicationContext(), query + "!!!!!", Toast.LENGTH_SHORT).show();
+                return true;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                Toast.makeText(getApplicationContext(), newText, Toast.LENGTH_SHORT).show();
+                return true;
+            }
+        });
+
+
+
+        // hamburger menu actions
+        drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
