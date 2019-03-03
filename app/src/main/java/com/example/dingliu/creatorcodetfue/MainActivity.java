@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,13 +64,12 @@ public class MainActivity extends AppCompatActivity {
                         // Add code here to update the UI based on the item selected
                         // For example, swap UI fragments here
 
+                        Intent intent = new Intent (getApplicationContext(), SubmitRecipe.class);
+                        startActivity(intent);
                         return true;
                     }
                 });
-
-
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -80,4 +80,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void toSubmitRecipe (View view){
+        Intent intent = new Intent (this, SubmitRecipe.class);
+        startActivity(intent);
+    }
 }
