@@ -4,7 +4,21 @@
     <string name="title_activity_navigation">navigation</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">CreatorCodeTfue</string>
     <string name="nav_header_subtitle">Charles, Jeff, Talia, Chris</string>
+    <string name="nav_header_title">CreatorCodeTfue</string>
+    <string name="contdesc">Image Upload</string>
+    <string name="upload">Upload Picture</string>
     <string name="nav_header_desc">CreatorCodeTfue</string>
+    <string name="recipeName">Recipe Name</string>
+    <string name="prepTime">Preparation Time</string>
+    <string name="cookTime">Cooking Time</string>
+    <string name="difficulty">Difficulty (1-10)</string>
+    <string name="serves">Serves</string>
+    <string name="directions">Directions</string>
+    <string name="ingredients">Ingredients</string>
+
+
+
+
+
 </resources>

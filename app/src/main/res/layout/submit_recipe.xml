@@ -1,23 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
     <ImageView
         android:id="@+id/imgView"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:contentDescription="@string/contdesc"
+        android:layout_height="wrap_content">
     </ImageView>
 
     <Button
         android:id="@+id/buttonLoadPicture"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imgView"
         android:layout_gravity="center"
-        android:layout_weight="0"
         android:onClick="loadImagefromGallery"
-        android:text="Load Picture" >
+        android:text="@string/upload">
     </Button>
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/recipeName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLoadPicture"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="@string/recipeName" android:inputType="text" />
+
+    <EditText
+        android:id="@+id/prepTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recipeName"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="@string/prepTime" android:inputType="number" />
+
+    <EditText
+        android:id="@+id/cookTime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prepTime"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="@string/cookTime" android:inputType="number" />
+
+    <EditText
+        android:id="@+id/difficulty"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cookTime"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="@string/difficulty" android:inputType="number" />
+
+    <EditText
+        android:id="@+id/serves"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/difficulty"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="@string/serves" android:inputType="number" />
+
+    <EditText
+        android:id="@+id/directions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/serves"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="@string/directions" android:inputType="text" />
+
+    <EditText
+        android:id="@+id/ingredients"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/directions"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="@string/ingredients" android:inputType="text" />
+
+
+</RelativeLayout>
