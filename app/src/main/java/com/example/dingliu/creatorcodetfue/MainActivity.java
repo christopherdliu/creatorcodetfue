@@ -64,9 +64,18 @@ public class MainActivity extends AppCompatActivity {
                         // Add code here to update the UI based on the item selected
                         // For example, swap UI fragments here
 
-                        Intent intent = new Intent (getApplicationContext(), SubmitRecipe.class);
-                        startActivity(intent);
+                        switch(menuItem.getItemId()) {
+                            case R.id.homepage:
+                                break;
+                            case R.id.submit_recipe:
+                                Intent intent = new Intent(getApplicationContext(), SubmitRecipe.class);
+                                startActivity(intent);
+                                break;
+                        }
+                        drawerLayout.closeDrawers();
+
                         return true;
+
                     }
                 });
     }
