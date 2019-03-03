@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:contentDescription="@string/contdesc"
+        android:layout_height="200dp">
+    </ImageView>
+
+    <Button
+        android:id="@+id/buttonLoadPicture"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgView"
+        android:layout_gravity="center"
+        android:onClick="loadImagefromGallery"
+        android:text="@string/upload">
+    </Button>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonLoadPicture">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/recipeName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/recipeName"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/prepTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/prepTime"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/cookTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/cookTime"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/difficulty"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/difficulty"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/serves"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/serves"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/directions"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/directions"
+                android:inputType="text" />
+
+
+            <EditText
+                android:id="@+id/ingredients"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="@string/ingredients"
+                android:inputType="text" />
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

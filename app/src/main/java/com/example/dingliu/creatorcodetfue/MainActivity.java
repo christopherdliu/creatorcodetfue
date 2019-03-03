@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.SearchView;
+import android.content.Intent;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -161,12 +162,21 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.closeDrawers();
 
                 // Add code here to update the UI based on the item selected
-                // For example, swap UI fragments here
 
-                return true;
-            }
-        });
+                        switch(menuItem.getItemId()) {
+                            case R.id.homepage:
+                                break;
+                            case R.id.submit_recipe:
+                                Intent intent = new Intent(getApplicationContext(), SubmitRecipe.class);
+                                startActivity(intent);
+                                break;
+                        }
+                        drawerLayout.closeDrawers();
 
+                        return true;
+
+                    }
+                });
 
         // hard coded ingredients list
         myIngredients.add(new Ingredient("- chicken"));
@@ -182,7 +192,6 @@ public class MainActivity extends AppCompatActivity {
 
         recipeAdapter.notifyDataSetChanged();
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -194,6 +203,11 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void toSubmitRecipe (View view){
+        Intent intent = new Intent (this, SubmitRecipe.class);
+        startActivity(intent);
+    }
+  
     public void originalView(){
         searchIngredientsList.setVisibility(View.GONE);
         basketText.setVisibility(View.VISIBLE);
@@ -220,6 +234,5 @@ public class MainActivity extends AppCompatActivity {
         }
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
-
 
 }
