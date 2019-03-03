@@ -10,10 +10,10 @@
     <string name="upload">Upload Picture</string>
     <string name="nav_header_desc">CreatorCodeTfue</string>
     <string name="recipeName">Recipe Name</string>
-    <string name="prepTime">Preparation Time</string>
-    <string name="cookTime">Cooking Time</string>
+    <string name="prepTime">Preparation Time (minutes)</string>
+    <string name="cookTime">Cooking Time (minutes)</string>
     <string name="difficulty">Difficulty (1-10)</string>
-    <string name="serves">Serves</string>
+    <string name="serves">Servings</string>
     <string name="directions">Directions</string>
     <string name="ingredients">Ingredients</string>
 
